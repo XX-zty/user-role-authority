@@ -42,7 +42,6 @@
         <el-table-column label="#" type="index"></el-table-column>
         <el-table-column label="用户名" prop="username"></el-table-column>
         <el-table-column label="邮箱" prop="email"></el-table-column>
-        <!-- <el-table-column label="创建时间" prop="createTime"></el-table-column> -->
         <el-table-column label="是否禁用">
           <template slot-scope="scope">
             <el-switch

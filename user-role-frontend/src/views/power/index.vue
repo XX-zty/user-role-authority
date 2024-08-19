@@ -41,7 +41,6 @@
           label="权限值"
           prop="permission.name"
         ></el-table-column>
-        <!-- <el-table-column label="创建时间" prop="createTime"></el-table-column> -->
         <el-table-column label="是否生效">
           <template slot-scope="scope">
             <el-switch

@@ -33,7 +33,6 @@
       <el-table :data="roleList.records" border stripe>
         <el-table-column label="#" type="index"></el-table-column>
         <el-table-column label="名称" prop="name"></el-table-column>
-        <!-- <el-table-column label="创建时间" prop="createTime"></el-table-column> -->
         <el-table-column label="是否有效">
           <template slot-scope="scope">
             <el-switch
