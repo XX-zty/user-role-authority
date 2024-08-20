@@ -37,7 +37,7 @@ public class UserController {
         return Result.success(userService.selectPage(userDto));
     }
 
-    @ApiOperation(value = "添加或或者修改用户")
+    @ApiOperation(value = "添加或者修改用户")
     @PostMapping("/saveOrUpdate")
     @RequiresRoles({"admin"})
     @RequiresPermissions({"user:update", "user:add"})

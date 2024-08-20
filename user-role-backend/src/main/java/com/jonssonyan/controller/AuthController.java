@@ -34,20 +34,7 @@ public class AuthController {
     @Autowired
     private UserService userService;
 
-    @ApiOperation(value = "注册用户")
-    @PostMapping("/register")
-    public Result register(@RequestBody User user) {
-        // 校验参数
-        ValidatorUtil.validateEntity(user);
-        Integer integer = userService.countByUsername(user.getUsername());
-        if (integer > 0) return Result.fail("用户名已经存在");
-        // 通过shiro默认的加密工具类为注册用户的密码进行加密
-        Object salt = ByteSource.Util.bytes(SystemConstant.JWT_SECRET_KEY);
-        String md5 = new SimpleHash("MD5", user.getPassword(), salt, 1024).toHex();
-        user.setPassword(md5);
-        userService.saveOrUpdate(user);
-        return Result.success();
-    }
+
 
     @ApiOperation(value = "登录")
     @PostMapping("/login")
